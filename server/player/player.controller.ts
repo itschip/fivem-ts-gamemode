@@ -1,3 +1,4 @@
+import PlayerDB from "./player.db";
 import { PlayerSourceMapProps } from "./player.interface";
 
 
@@ -16,6 +17,8 @@ on('playerJoining', () => {
       playerIdentifier = identifier.split(':')[1];
     }
   }
+
+  PlayerDB.createPlayer(playerIdentifier, username, 0)
 
   PlayerSourceMap.set(pSource, { source: pSource, identifier: playerIdentifier, username })
 })
