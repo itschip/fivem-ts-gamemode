@@ -1,7 +1,21 @@
+import Fivem from "@utils/fivem";
+
 export class _Vehicle {
 
-  async Create(model: string, x: number, y: number, z: number, heading: number) {
-    const vehicle = CreateVehicle(GetHashKey(model), x, y, z, heading, false, false);
+  async Create(spawnInCar: boolean, model: string, x: number, y: number, z: number, heading: number) {
+    
+    RequestModel(GetHashKey(model))
+    while (!HasModelLoaded(GetHashKey(model))) {
+      await Fivem.Delay(1)
+    }
+
+    console.log(model, x, y, z, heading)
+    const vehicle = CreateVehicle(GetHashKey(model), x, y, z, heading, false, true);
+
+    if (spawnInCar) {
+      TaskWarpPedIntoVehicle(PlayerPedId(), vehicle, -1);
+    }
+
     return vehicle;
   }
 }
