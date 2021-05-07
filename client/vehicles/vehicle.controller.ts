@@ -10,7 +10,7 @@ export class _Vehicle {
     }
 
     console.log(model, x, y, z, heading)
-    const vehicle = CreateVehicle(GetHashKey(model), x, y, z, heading, false, true);
+    const vehicle = CreateVehicle(GetHashKey(model), x, y, z, heading, true, true);
 
     if (spawnInCar) {
       TaskWarpPedIntoVehicle(PlayerPedId(), vehicle, -1);
