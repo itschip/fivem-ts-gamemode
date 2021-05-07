@@ -2,8 +2,8 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "*": ["types/*"],
-      "@vehicles": ["./vehicles/vehicle.controller"]
+      "@client/vehicles": ["vehicles/vehicle.controller"],
+      "@utils/fivem": ["utils/fivem"]
     },
     "outDir": "./",
     "noImplicitAny": true,
@@ -17,5 +17,5 @@
     "esModuleInterop": true
   },
   "include": ["./**/*"],
-  "exclude": ["**/node_modules", "**/__tests__/*"]
+  "exclude": ["**/node_modules"]
 }
