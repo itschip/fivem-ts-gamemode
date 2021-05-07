@@ -6,7 +6,7 @@ export const PlayerSourceMap = new Map<number, PlayerSourceMapProps>();
 
 on('playerJoining', () => {
   const pSource = (global as any).source;
-  const username = GetPlayerName(pSource)
+  const username = GetPlayerName(pSource);
 
   // get identifier
   const identifiers = getPlayerIdentifiers(pSource);
@@ -18,7 +18,12 @@ on('playerJoining', () => {
     }
   }
 
-  PlayerDB.createPlayer(playerIdentifier, username, 0)
+  PlayerDB.createPlayer(playerIdentifier, username, 0);
 
-  PlayerSourceMap.set(pSource, { source: pSource, identifier: playerIdentifier, username })
+  PlayerSourceMap.set(pSource, { source: pSource, identifier: playerIdentifier, username });
+})
+
+on('playerDropped', () => {
+  const pSource = (global as any).source
+  PlayerSourceMap.delete(pSource)
 })
