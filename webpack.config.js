@@ -64,6 +64,10 @@ const client = {
     minimize: true,
   },
   resolve: {
+    alias: {
+      '@client/vehicles': path.resolve(__dirname, 'client/vehicles/vehicle.controller'),
+      '@utils/fivem': path.resolve(__dirname, 'client/utils/fivem.ts')
+    },
     extensions: [".ts", ".js"],
   },
   output: {
