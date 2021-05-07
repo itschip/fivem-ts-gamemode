@@ -27,7 +27,3 @@ on('playerDropped', () => {
   const pSource = (global as any).source
   PlayerSourceMap.delete(pSource)
 })
-
-/* global.exports['spawnmanager'].spawnPlayer({
-  x: 
-}) */
