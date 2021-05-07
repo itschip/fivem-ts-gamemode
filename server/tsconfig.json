@@ -2,7 +2,8 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "*": ["types/*"]
+      "@server/weapons": ["weapons/weapon.controller"],
+      "@server/player": ["player/player.controller"]
     },
     "outDir": "./",
     "noImplicitAny": true,
