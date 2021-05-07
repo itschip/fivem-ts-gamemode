@@ -14,6 +14,6 @@ onNet('chip_game:playerKilled', (killer: any, weapon: any) => {
     multiline: true,
     args: ['Feed', `${GetPlayerName(killer)} killed ${GetPlayerName(pSource)}`]
   })
-  emitNet('chip_game:respawnPlayer', pSource);
+  emitNet('chip_game:respawnPlayer', pSource)
 })
 
