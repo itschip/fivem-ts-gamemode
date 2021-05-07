@@ -30,6 +30,10 @@ const server = {
     minimize: true,
   },
   resolve: {
+    alias: {
+      '@server/weapons': path.resolve(__dirname, 'server/weapons/weapon.controller'),
+      '@server/player': path.resolve(__dirname, 'server/player/player.controller'),
+    },
     extensions: [".ts", ".js"],
   },
   output: {
