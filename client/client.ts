@@ -47,3 +47,8 @@ on('baseevents:onPlayerKilled', (killerId: any, deathData: any[]) => {
   console.log(killerId);
   emitNet('chip_game:playerKilled', killerId, deathData[1])
 })
+
+RegisterCommand('weather', () => {
+  NetworkOverrideClockTime(12, 0, 0)
+  SetOverrideWeather('clear')
+}, false)
