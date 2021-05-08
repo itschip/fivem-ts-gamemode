@@ -1,7 +1,8 @@
 // Start coding!
 import Weapon from '@server/weapons'
 import '@server/player'
-import { emitWarning } from 'process'
+import '@server/account'
+import Player from '@server/player';
 
 RegisterCommand('weapon', (src: number, args: string[], raw: string) => {
   Weapon.Give(src, args[0])
@@ -17,3 +18,9 @@ onNet('chip_game:playerKilled', (killer: any, weapon: any) => {
   emitNet('chip_game:respawnPlayer', pSource)
 })
 
+
+RegisterCommand('givemoney', async () => {
+  const pSource: number = (global as any).source;
+
+  await Player.account.giveMoney(pSource, 100)
+}, false)
