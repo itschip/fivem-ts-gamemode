@@ -15,6 +15,7 @@ export class _Vehicle {
     if (spawnInCar) {
       TaskWarpPedIntoVehicle(PlayerPedId(), vehicle, -1);
     }
+    SetVehicleAsNoLongerNeeded(vehicle);
 
     return vehicle;
   }
