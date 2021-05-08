@@ -1,6 +1,6 @@
 import PlayerDB from "./player.db";
 import { PlayerSourceMapProps } from "./player.interface";
-
+import Account, { _Account } from '@server/account';
 
 export const PlayerSourceMap = new Map<number, PlayerSourceMapProps>();
 
@@ -27,3 +27,16 @@ on('playerDropped', () => {
   const pSource = (global as any).source
   PlayerSourceMap.delete(pSource)
 })
+
+
+class _Player {
+  public account: _Account
+  
+  constructor() {
+    this.account = Account;
+  }
+}
+
+const Player = new _Player();
+
+export default Player;
