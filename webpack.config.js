@@ -33,6 +33,8 @@ const server = {
     alias: {
       '@server/weapons': path.resolve(__dirname, 'server/weapons/weapon.controller'),
       '@server/player': path.resolve(__dirname, 'server/player/player.controller'),
+      '@server/account': path.resolve(__dirname, 'server/account/account.controller'),
+      '@server/db': path.resolve(__dirname, 'server/utils/db'),
     },
     extensions: [".ts", ".js"],
   },

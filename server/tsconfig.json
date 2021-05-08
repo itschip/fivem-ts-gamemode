@@ -3,7 +3,9 @@
     "baseUrl": ".",
     "paths": {
       "@server/weapons": ["weapons/weapon.controller"],
-      "@server/player": ["player/player.controller"]
+      "@server/player": ["player/player.controller"],
+      "@server/account": ["account/account.controller"],
+      "@server/db": ["utils/db"]
     },
     "outDir": "./",
     "noImplicitAny": true,
