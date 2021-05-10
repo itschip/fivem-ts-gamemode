@@ -1,8 +1,10 @@
+import { db } from "@server/db";
+
 class _PlayerDB {
 
   async createPlayer(identifier: string, username: string, level = 0) {
     const query = `INSERT INTO users (identifier, username, level) VALUES (?, ?, ?)`;
-    // actaully exectute the query
+    db.query(query, [identifier, username, level])
   }
 }
 
