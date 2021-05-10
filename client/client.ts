@@ -8,7 +8,7 @@ RegisterCommand(
   'car',
   async (src: number, args: string[], raw: string) => {
     console.log('hello');
-    const [x, y, z] = GetEntityCoords(PlayerPedId(), true);
+    const [x, y, z] = GetEntityCoords(PlayerPedId(), false);
     const ped = PlayerPedId();
     const veh = await Vehicle.Create(
       true,
@@ -41,7 +41,7 @@ NetworkSetFriendlyFireOption(true);
 RegisterCommand(
   'coords',
   (src: number, args: string[], raw: string) => {
-    console.log(GetEntityCoords(PlayerPedId(), true));
+    console.log(GetEntityCoords(PlayerPedId(), false));
   },
   false,
 );
