@@ -3,7 +3,8 @@
     "baseUrl": ".",
     "paths": {
       "@client/vehicles": ["vehicles/vehicle.controller"],
-      "@utils/fivem": ["utils/fivem"]
+      "@utils/fivem": ["utils/fivem"],
+      "@client/peds": ["peds/ped.controller"]
     },
     "outDir": "./",
     "noImplicitAny": true,

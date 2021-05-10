@@ -72,6 +72,7 @@ const client = {
   resolve: {
     alias: {
       '@client/vehicles': path.resolve(__dirname, 'client/vehicles/vehicle.controller'),
+      '@client/peds': path.resolve(__dirname, 'client/peds/ped.controller'),
       '@utils/fivem': path.resolve(__dirname, 'client/utils/fivem.ts')
     },
     extensions: [".ts", ".js"],
