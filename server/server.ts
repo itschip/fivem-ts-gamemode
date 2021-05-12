@@ -41,9 +41,3 @@ const weaponComps: any = {
     'COMPONENT_CARBINERIFLE_VARMOD_LUXE',
   ],
 };
-
-onNet('getAllVehcilesChip', () => {
-  for (const vehicle of GetAllVehicles()) {
-    FreezeEntityPosition(vehicle, true);
-  }
-});
