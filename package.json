@@ -16,6 +16,7 @@
     "mysql2": "^2.2.5"
   },
   "devDependencies": {
+    "prettier": "^2.3.0",
     "remove-files-webpack-plugin": "^1.4.4",
     "ts-loader": "^8.0.17",
     "typescript": "^4.2.2",
