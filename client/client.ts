@@ -1,4 +1,3 @@
-import Ped from '@client/peds';
 import Vehicle from '@client/vehicles';
 import Fivem from '@utils/fivem';
 
