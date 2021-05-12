@@ -83,4 +83,43 @@ const client = {
   },
 };
 
-module.exports = [server, client];
+const shared = {
+  entry: "./shared/shared.ts",
+  module: {
+    rules: [
+      {
+        test: /\.ts$/,
+        use: ["ts-loader"],
+        exclude: /node_modules/,
+      },
+    ],
+  },
+  plugins: [
+    new webpack.DefinePlugin({ "global.GENTLY": false }),
+    new RemovePlugin({
+      before: {
+        include: [path.resolve(buildPath, "shared")],
+      },
+      watch: {
+        include: [path.resolve(buildPath, "shared")],
+      },
+    }),
+  ],
+  optimization: {
+    minimize: true,
+  },
+  resolve: {
+    alias: {
+      '@decorators/command': path.resolve(__dirname, 'shared/decorators/command.ts'),
+      '@decorators/events': path.resolve(__dirname, 'shared/decorators/events.ts'),
+    },
+    extensions: [".ts", ".js"],
+  },
+  output: {
+    filename: "[contenthash].shared.js",
+    path: path.resolve(buildPath, "shared"),
+  },
+  target: "node",
+};
+
+module.exports = [server, client, shared];

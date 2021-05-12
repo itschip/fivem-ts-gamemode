@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@decorators/command": ["decorators/command"],
+      "@decorators/events": ["decorators/events"]
+    },
+    "outDir": "./",
+    "noImplicitAny": true,
+    "module": "commonjs",
+    "target": "es6",
+    "allowJs": true,
+    "lib": ["es2017"],
+    "types": ["@citizenfx/client", "@citizenfx/server", "@types/node"],
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  },
+  "include": ["./**/*"],
+  "exclude": ["**/node_modules"]
+}
