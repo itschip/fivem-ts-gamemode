@@ -1,3 +1,5 @@
+// this is prototype
+
 class _PlayerService {
   constructor() {
     console.log('Player class started')
