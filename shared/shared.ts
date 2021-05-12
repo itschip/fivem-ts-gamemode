@@ -1,3 +1,3 @@
-import { Command } from "@decorators/command";
+import { Command } from '@decorators/command';
 
-Command();
+Command('hello')

@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@decorators/command": ["decorators/command"],
+      "@decorators/command": ["decorators/commands"],
       "@decorators/events": ["decorators/events"]
     },
     "outDir": "./",

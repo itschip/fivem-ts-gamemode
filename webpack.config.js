@@ -110,7 +110,7 @@ const shared = {
   },
   resolve: {
     alias: {
-      '@decorators/command': path.resolve(__dirname, 'shared/decorators/command.ts'),
+      '@decorators/command': path.resolve(__dirname, 'shared/decorators/commands.ts'),
       '@decorators/events': path.resolve(__dirname, 'shared/decorators/events.ts'),
     },
     extensions: [".ts", ".js"],
