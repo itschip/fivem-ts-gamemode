@@ -4,7 +4,7 @@ export class _Fivem {
   }
 
   clearArea(radius: number) {
-    const [x, y, z] = GetEntityCoords(PlayerPedId(), true);
+    const [x, y, z] = GetEntityCoords(PlayerPedId(), false);
     ClearArea(x, y, z, radius, true, false, false, false);
   }
 }
