@@ -15,7 +15,9 @@
     "types": ["@citizenfx/client", "@types/node"],
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
   },
   "include": ["./**/*"],
   "exclude": ["**/node_modules"]

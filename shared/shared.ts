@@ -1,3 +1,3 @@
-import { Command } from '@decorators/command';
-
-Command('hello')
+function doSomething() {
+  console.log('lol')
+}

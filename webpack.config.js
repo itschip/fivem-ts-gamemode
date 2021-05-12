@@ -35,6 +35,7 @@ const server = {
       '@server/player': path.resolve(__dirname, 'server/player/player.controller'),
       '@server/account': path.resolve(__dirname, 'server/account/account.controller'),
       '@server/db': path.resolve(__dirname, 'server/utils/db'),
+      '@server/commands': path.resolve(__dirname, 'server/lib/commands.ts'),
     },
     extensions: [".ts", ".js"],
   },
@@ -73,7 +74,7 @@ const client = {
     alias: {
       '@client/vehicles': path.resolve(__dirname, 'client/vehicles/vehicle.controller'),
       '@client/peds': path.resolve(__dirname, 'client/peds/ped.controller'),
-      '@utils/fivem': path.resolve(__dirname, 'client/utils/fivem.ts')
+      '@utils/fivem': path.resolve(__dirname, 'client/utils/fivem.ts'),
     },
     extensions: [".ts", ".js"],
   },
@@ -109,10 +110,6 @@ const shared = {
     minimize: true,
   },
   resolve: {
-    alias: {
-      '@decorators/command': path.resolve(__dirname, 'shared/decorators/commands.ts'),
-      '@decorators/events': path.resolve(__dirname, 'shared/decorators/events.ts'),
-    },
     extensions: [".ts", ".js"],
   },
   output: {
