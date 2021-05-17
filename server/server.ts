@@ -1,8 +1,7 @@
 // Start coding!
-import Weapon from '@server/weapons';
-import '@server/account';
 import './admin'
-import Player from '@server/player';
+import Weapon from '@server/weapons';
+
 
 RegisterCommand(
   'weapon',

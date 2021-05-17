@@ -1,6 +1,8 @@
 import Vehicle from '@client/vehicles';
 import Fivem from '@utils/fivem';
 
+
+
 const exp = (global as any).exports;
 
 RegisterCommand(
