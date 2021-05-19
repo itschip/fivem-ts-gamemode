@@ -7,10 +7,12 @@ class Admin {
 
   @Command({
     command: 'kick',
+    args: ['src', 'reason'],
     restricted: false
   })
-  public Kick() {
+  public Kick(playerId: number, reason: string) {
     console.log('hehe')
+    DropPlayer(playerId.toString(), reason);
   }
 }
 
