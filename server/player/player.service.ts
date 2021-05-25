@@ -1,19 +1,17 @@
 import { PlayerSourceMap } from '@server/player';
 
 class _PlayerService {
-  private readonly _source: number
 
   constructor(src: number) {
     console.log('Player Service started!');
-    this._source = src;
   }
 
-  public getName() {
-    return PlayerSourceMap.get(this._source).username
+  public getName(source: number) {
+    return PlayerSourceMap.get(source).username
   }
 
-  public getIdentifier() {
-    return PlayerSourceMap.get(this._source).identifier;
+  public getIdentifier(source: number) {
+    return PlayerSourceMap.get(source).identifier;
   }
 
 }
