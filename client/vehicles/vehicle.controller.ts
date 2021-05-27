@@ -1,15 +1,21 @@
-import Fivem from "@utils/fivem";
+import Fivem from '@utils/fivem';
 
 export class _Vehicle {
-
-  async Create(spawnInCar: boolean, ped: any, model: string, x: number, y: number, z: number, heading: number) {
-    
-    RequestModel(GetHashKey(model))
+  async Create(
+    spawnInCar: boolean,
+    ped: any,
+    model: string,
+    x: number,
+    y: number,
+    z: number,
+    heading: number,
+  ) {
+    RequestModel(GetHashKey(model));
     while (!HasModelLoaded(GetHashKey(model))) {
-      await Fivem.Delay(1)
+      await Fivem.Delay(1);
     }
 
-    console.log(model, x, y, z, heading)
+    console.log(model, x, y, z, heading);
     const vehicle = CreateVehicle(GetHashKey(model), x, y, z, heading, true, true);
 
     if (spawnInCar) {
