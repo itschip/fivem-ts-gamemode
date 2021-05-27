@@ -36,6 +36,7 @@ const server = {
       '@server/account': path.resolve(__dirname, 'server/account/account.controller'),
       '@server/db': path.resolve(__dirname, 'server/utils/db'),
       '@server/commands': path.resolve(__dirname, 'server/lib/commands.ts'),
+      "@shared/weapons": path.resolve(__dirname, 'shared/weapons.ts')
     },
     extensions: [".ts", ".js"],
   },
