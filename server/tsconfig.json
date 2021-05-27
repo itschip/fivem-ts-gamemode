@@ -6,7 +6,8 @@
       "@server/player": ["player/player.controller"],
       "@server/account": ["account/account.controller"],
       "@server/db": ["utils/db"],
-      "@server/commands": ["lib/commands"]
+      "@server/commands": ["lib/commands"],
+      "@shared/weapons": ["../shared/weapons"]
     },
     "outDir": "./",
     "noImplicitAny": true,
