@@ -1,7 +1,7 @@
 import { PlayerSourceMap } from '@server/player';
 
 class _PlayerService {
-  constructor(src: number) {
+  constructor() {
     console.log('Player Service started!');
   }
 
@@ -17,3 +17,7 @@ class _PlayerService {
     return PlayerSourceMap.get(source).level;
   }
 }
+
+const PlayerService = new _PlayerService();
+
+export default PlayerService;
