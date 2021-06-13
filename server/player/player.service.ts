@@ -16,6 +16,10 @@ class _PlayerService {
   getLevel(source: number) {
     return PlayerSourceMap.get(source).level;
   }
+
+  getPing(source: number): number {
+    return 10;
+  }
 }
 
 const PlayerService = new _PlayerService();
